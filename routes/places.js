@@ -49,7 +49,7 @@ const placesRouter = (app, route, places) => {
 
   app.patch(`${route}/:id`, (req, res) => {
     const { id } = req.params;
-    const placeIndex = places.findIndex(p => p.id == id);
+    const placeIndex = places.findIndex(place => place.id == id);
 
     if (placeIndex === -1) {
       return res.status(404).json({
@@ -65,12 +65,24 @@ const placesRouter = (app, route, places) => {
     if (region) places[placeIndex].region = region;
     if (elevation) places[placeIndex].elevation = elevation;
 
-    res
-      .status(200)
-      .json({
-        message: 'Place changed successfully.',
-        data: places[placeIndex],
+    res.status(200).json({
+      message: 'Place changed successfully.',
+      data: places[placeIndex],
+    });
+  });
+
+  app.delete(`${route}/:id`, (req, res) => {
+    const { id } = req.params;
+    const placeIndex = places.findIndex(place => place.id == id);
+
+    if (placeIndex === -1) {
+      return res.status(404).json({
+        message: 'Place not found',
       });
+    }
+
+    const deletedPlace = places.splice(placeIndex, 1)[0];
+    res.json({ message: 'Place deleted.', data: deletedPlace });
   });
 };
 
