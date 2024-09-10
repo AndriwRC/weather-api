@@ -11,7 +11,6 @@ const data = {
     {
       id: 1,
       name: 'Barranquilla',
-      location: { latitude: 10.98, longitude: -74.78 },
       temperature: 28,
       humidity: 70,
       region: 'Costa Caribe',
@@ -20,7 +19,6 @@ const data = {
     {
       id: 2,
       name: 'Bogotá',
-      location: { latitude: 4.61, longitude: -74.08 },
       temperature: 14,
       humidity: 60,
       region: 'Región Andina',
@@ -29,7 +27,6 @@ const data = {
     {
       id: 3,
       name: 'Cali',
-      location: { latitude: 3.42, longitude: -76.52 },
       temperature: 24,
       humidity: 65,
       region: 'Costa Pacífica',
@@ -38,7 +35,6 @@ const data = {
     {
       id: 4,
       name: 'Medellín',
-      location: { latitude: 6.25, longitude: -75.57 },
       temperature: 22,
       humidity: 55,
       region: 'Valle de Aburrá',
