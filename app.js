@@ -10,7 +10,6 @@ app.use(express.json());
 const data = {
   places: [
     {
-      id: 1,
       name: 'Barranquilla',
       temperature: 28,
       humidity: 70,
@@ -18,7 +17,6 @@ const data = {
       elevation: 18,
     },
     {
-      id: 2,
       name: 'Bogotá',
       temperature: 14,
       humidity: 60,
@@ -26,7 +24,6 @@ const data = {
       elevation: 2640,
     },
     {
-      id: 3,
       name: 'Cali',
       temperature: 24,
       humidity: 65,
@@ -34,7 +31,6 @@ const data = {
       elevation: 995,
     },
     {
-      id: 4,
       name: 'Medellín',
       temperature: 22,
       humidity: 55,
