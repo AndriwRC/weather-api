@@ -41,6 +41,31 @@ router.post('/', async (req, res) => {
       humidity,
       region: '',
       elevation: 0,
+      weather: {
+        current: {
+          date: new Date(),
+          temperature: 28,
+          humidity: 70,
+          condition: 'Sunny',
+        },
+        forecast: [
+          {
+            date: '2024-09-10',
+            precipitationChance: 20,
+            condition: 'Partly Cloudy',
+          },
+          {
+            date: '2024-09-11',
+            precipitationChance: 30,
+            condition: 'Cloudy',
+          },
+          {
+            date: '2024-09-12',
+            precipitationChance: 15,
+            condition: 'Sunny',
+          },
+        ],
+      },
     };
 
     const result = await placeService.createPlace(newPlace);
