@@ -1,9 +1,14 @@
+const express = require('express');
 const placesRouter = require('./places');
 const weatherRouter = require('./weather');
+// const usersRouter = require('./users');
 
-const router = (app, data) => {
-  placesRouter(app, '/places', data.places);
-  weatherRouter(app, '/weather', data.weather);
-};
+function routerApi(app) {
+  const router = express.Router();
+  app.use('/api/v1', router);
+  router.use('/places', placesRouter);
+  router.use('/weather', weatherRouter);
+  // router.use('/users', usersRouter);
+}
 
-module.exports = router;
+module.exports = routerApi;
