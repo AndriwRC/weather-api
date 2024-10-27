@@ -1,4 +1,5 @@
-# Rubrica 1er corte
+# Rubrica 10% 2do corte
+
 - Estudiante: Andriw Rollo Castro, arrollo@cuc.edu.co
 - Desarrollo Web 2
 - Ingeniería de Sistemas
